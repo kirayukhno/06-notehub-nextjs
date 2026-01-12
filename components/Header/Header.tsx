@@ -1,4 +1,4 @@
-import css from "@/app/components/Header/Header.module.css";
+import css from "./Header.module.css";
 import Link from "next/link";
 
 export default function Header() {
