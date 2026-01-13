@@ -31,8 +31,8 @@ export const fetchNotes = async (search: string, page: number, perPage = 12): Pr
 };
 
 export const fetchNoteById = async (id: string): Promise<Note> => {
-  const { data } = await axios.get(`/notes/${id}`);
-  return data;
+  const response = await axios.get<Note>(`/notes/${id}`);
+  return response.data;
 };
 
 export const createNote = async (payload: CreateNote): Promise<Note> => {
